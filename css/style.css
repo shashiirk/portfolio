@@ -97,14 +97,15 @@ a {
 }
 
 #work .container .projects {
+  padding: 0.4rem;
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 4rem;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 0rem;
 }
 
 #work .container .projects .project {
-  width: 54rem;
-  height: 36rem;
+  width: 28.5rem;
+  height: 19rem;
 }
 
 #work .container .projects .project-1 {
