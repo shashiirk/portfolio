@@ -29,7 +29,6 @@ a {
 }
 
 .container {
-  border: 1px blue solid;
   width: 85%;
   margin: auto;
   font-family: "Montserrat", sans-serif;
@@ -95,6 +94,33 @@ a {
 
 #work .container .title {
   text-decoration: underline double #f13c43;
+}
+
+#work .container .projects {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 4rem;
+}
+
+#work .container .projects .project {
+  width: 54rem;
+  height: 36rem;
+}
+
+#work .container .projects .project-1 {
+  background: url("../img/indianensure.jpg") no-repeat center center/cover;
+}
+
+#work .container .projects .project-2 {
+  background: url("../img/timesthen.jpg") no-repeat center center/cover;
+}
+
+#work .container .projects .project-3 {
+  background: url("../img/grandhotel.jpg") no-repeat center center/cover;
+}
+
+#work .container .projects .project-4 {
+  background: url("../img/portfolio.jpg") no-repeat center center/cover;
 }
 
 #connect {

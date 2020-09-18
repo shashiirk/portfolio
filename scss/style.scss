@@ -37,7 +37,7 @@ a {
 }
 
 .container {
-  border: 1px blue solid;
+  // border: 1px blue solid;
   width: 85%;
   margin: auto;
   font-family: $lead-font-stack;
@@ -110,6 +110,32 @@ a {
   .container {
     .title {
       text-decoration: underline double $work-color;
+    }
+
+    .projects {
+      // border: 1px green solid;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 4rem;
+
+      .project {
+        // border: 1px orange solid;
+        width: 54rem;
+        height: 36rem;
+      }
+
+      .project-1 {
+        background: url("../img/indianensure.jpg") no-repeat center center / cover;
+      }
+      .project-2 {
+        background: url("../img/timesthen.jpg") no-repeat center center / cover;
+      }
+      .project-3 {
+        background: url("../img/grandhotel.jpg") no-repeat center center / cover;
+      }
+      .project-4 {
+        background: url("../img/portfolio.jpg") no-repeat center center / cover;
+      }
     }
   }
 }
