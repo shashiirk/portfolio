@@ -1,1 +1,116 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  border: 1px blue solid;
+  width: 85%;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+.container .title {
+  font-size: 8rem;
+}
+
+.container .sub-title {
+  font-size: 2.2rem;
+  padding: 4rem 0 3rem;
+}
+
+#home {
+  border: 1px red solid;
+  height: 100vh;
+  width: 100%;
+  padding: 4rem 0;
+  overflow: hidden;
+  display: flex;
+}
+
+#home .container h1 {
+  font-size: 8rem;
+  padding-bottom: 3rem;
+}
+
+#home .container p {
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+#home .container p .underline {
+  text-decoration: underline solid orangered;
+}
+
+#about {
+  border: 1px red solid;
+  width: 100%;
+  padding: 4rem 0;
+  overflow: hidden;
+  display: flex;
+}
+
+#about .container .title {
+  text-decoration: underline double purple;
+}
+
+#about .container .info {
+  font-family: "Hind", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+#work {
+  border: 1px red solid;
+  width: 100%;
+  padding: 4rem 0;
+  overflow: hidden;
+  display: flex;
+}
+
+#work .container .title {
+  text-decoration: underline double green;
+}
+
+#connect {
+  border: 1px red solid;
+  width: 100%;
+  padding: 4rem 0;
+  overflow: hidden;
+  display: flex;
+}
+
+#connect .container .title {
+  text-decoration: underline double steelblue;
+}
+
+#connect .container .icons .icon {
+  border: 1px blue solid;
+  font-size: 4rem;
+  margin: 0.6rem;
+  padding: 0.4rem;
+  transition: color 400ms;
+}
+
+#connect .container .icons .icon:hover {
+  color: #404040;
+}
+/*# sourceMappingURL=style.css.map */
