@@ -1,3 +1,3 @@
 # portfolio-two
 
-This is my second personal portfolio project. **HTML** and **SASS** are the tools that I have used.
+This is my second personal portfolio project. I have used **HTML** and **SASS** to build this website.
