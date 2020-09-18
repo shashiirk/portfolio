@@ -7,16 +7,25 @@
 html {
   font-size: 62.5%;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   width: 100%;
   height: 100%;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239cb5c6' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
 }
 
 a {
   text-decoration: none;
   color: #000;
+}
+
+.line-break {
+  display: block;
+  padding: 1rem 0;
 }
 
 .container {
@@ -37,7 +46,6 @@ a {
 }
 
 #home {
-  border: 1px red solid;
   height: 100vh;
   width: 100%;
   padding: 4rem 0;
@@ -55,12 +63,12 @@ a {
   font-weight: 700;
 }
 
-#home .container p .underline {
-  text-decoration: underline solid orangered;
+#home .container p .underline-link {
+  text-decoration: underline wavy #14db14;
+  transition: text-decoration-color 1000ms;
 }
 
 #about {
-  border: 1px red solid;
   width: 100%;
   padding: 4rem 0;
   overflow: hidden;
@@ -68,7 +76,7 @@ a {
 }
 
 #about .container .title {
-  text-decoration: underline double purple;
+  text-decoration: underline double #2b89ca;
 }
 
 #about .container .info {
@@ -79,7 +87,6 @@ a {
 }
 
 #work {
-  border: 1px red solid;
   width: 100%;
   padding: 4rem 0;
   overflow: hidden;
@@ -87,11 +94,10 @@ a {
 }
 
 #work .container .title {
-  text-decoration: underline double green;
+  text-decoration: underline double #f13c43;
 }
 
 #connect {
-  border: 1px red solid;
   width: 100%;
   padding: 4rem 0;
   overflow: hidden;
@@ -99,18 +105,55 @@ a {
 }
 
 #connect .container .title {
-  text-decoration: underline double steelblue;
+  text-decoration: underline double #5f1478;
 }
 
 #connect .container .icons .icon {
-  border: 1px blue solid;
-  font-size: 4rem;
-  margin: 0.6rem;
-  padding: 0.4rem;
-  transition: color 400ms;
+  font-size: 2.4rem;
+  margin: 0 0.4rem;
+  padding: 0.2rem;
+  transition: transform 400ms;
 }
 
 #connect .container .icons .icon:hover {
-  color: #404040;
+  transform: translateY(-4px);
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56%;
+  }
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  html {
+    font-size: 52%;
+  }
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 48%;
+  }
+  #home .container h1,
+  #home .container p,
+  .container .title {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  #home .container h1,
+  #home .container p,
+  .container .title {
+    font-size: 5.4rem;
+    overflow-wrap: break-word;
+  }
 }
 /*# sourceMappingURL=style.css.map */
