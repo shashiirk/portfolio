@@ -4,6 +4,8 @@ $name-color: #14db14;
 $about-color: #2b89ca;
 $work-color: #f13c43;
 $connect-color: #5f1478;
+$light-gray: #404040;
+$dark-gray: #080808;
 
 * {
   margin: 0;
@@ -20,15 +22,11 @@ html {
 body {
   width: 100%;
   height: 100%;
-
-  background-color: #fff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239cb5c6' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: $dark-gray;
 }
 
 .line-break {
@@ -45,9 +43,11 @@ a {
 
   .title {
     font-size: 8rem;
+    font-weight: 800;
   }
 
   .sub-title {
+    color: $light-gray;
     font-size: 2.2rem;
     padding: 4rem 0 3rem;
   }
@@ -62,18 +62,14 @@ a {
   display: flex;
 
   .container {
-    h1 {
-      font-size: 8rem;
-      padding-bottom: 3rem;
-    }
-
     p {
       font-size: 8rem;
-      font-weight: 700;
+      font-weight: 800;
 
       .underline-link {
-        text-decoration: underline wavy $name-color;
-        transition: text-decoration-color 1000ms;
+        // border: 1px red solid;
+        text-decoration: underline solid $name-color;
+        -webkit-tap-highlight-color: transparent;
       }
     }
   }
@@ -96,6 +92,7 @@ a {
       font-size: 4rem;
       font-weight: 600;
       line-height: 1.2;
+      color: $dark-gray;
     }
   }
 }
@@ -155,11 +152,17 @@ a {
 
     .icons {
       // border: 1px red solid;
+
+      .icon-box {
+        // border: 1px orange solid;
+        display: inline-block;
+        -webkit-tap-highlight-color: transparent;
+      }
       
       .icon {
         // border: 1px blue solid;
         font-size: 2.4rem;
-        margin: 0 0.4rem;
+        margin: 0.4rem;
         padding: 0.2rem;
         transition: transform 400ms;
 
@@ -168,46 +171,5 @@ a {
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 56%;
-  }
-
-  .container {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  html {
-    font-size: 52%;
-  }
-
-  .container {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 48%;
-  }
-
-  #home .container h1,
-  #home .container p,
-  .container .title {
-    font-size: 6rem;
-  }
-}
-
-@media screen and (max-width: 340px) {
-  #home .container h1,
-  #home .container p,
-  .container .title {
-    font-size: 5.4rem;
-    overflow-wrap: break-word;
   }
 }
