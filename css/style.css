@@ -176,22 +176,26 @@ a {
   text-decoration: underline double #5f1478;
 }
 
+#connect .container .icons {
+  padding: 0.2rem;
+}
+
 #connect .container .icons .icon-box {
   display: inline-block;
   -webkit-tap-highlight-color: transparent;
+  color: #080808;
+  transition: transform 400ms;
+}
+
+@media (hover: hover) {
+  #connect .container .icons .icon-box:hover, #connect .container .icons .icon-box:focus {
+    transform: translateY(-4px);
+  }
 }
 
 #connect .container .icons .icon-box .icon {
   font-size: 3rem;
   margin: 0.4rem;
-  padding: 0.2rem;
-  transition: transform 400ms;
-}
-
-@media (hover: hover) {
-  #connect .container .icons .icon-box .icon:hover, #connect .container .icons .icon-box .icon:focus {
-    transform: translateY(-4px);
-  }
 }
 
 @media (max-width: 1020px) {
@@ -309,10 +313,10 @@ a {
   #work .container .projects .eye-box:active .eye {
     left: 44%;
   }
-  #connect .container .icons .icon-box .icon {
+  #connect .container .icons .icon-box {
     transition: 0ms;
   }
-  #connect .container .icons .icon-box .icon:active {
-    color: #404040;
+  #connect .container .icons .icon-box:active {
+    color: #a0a0a0;
   }
 }

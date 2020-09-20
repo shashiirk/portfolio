@@ -7,6 +7,7 @@ $connect-color: #5f1478;
 $transition-color: #001122;
 $light-gray: #404040;
 $dark-gray: #080808;
+$tap-icon-color: #a0a0a0;
 
 * {
   margin: 0;
@@ -193,22 +194,24 @@ a {
     }
 
     .icons {
+      padding: 0.2rem;
+
       .icon-box {
         display: inline-block;
         -webkit-tap-highlight-color: transparent;
-        
+        color: $dark-gray;
+        transition: transform 400ms;
+  
+        @media (hover: hover) {
+          &:hover,
+          &:focus {
+            transform: translateY(-4px);
+          }
+        }
+
         .icon {
           font-size: 3rem;
           margin: 0.4rem;
-          padding: 0.2rem;
-          transition: transform 400ms;
-  
-          @media (hover: hover) {
-            &:hover,
-            &:focus {
-              transform: translateY(-4px);
-            }
-          }
         }
       }
       
@@ -359,11 +362,11 @@ a {
     }
   }
 
-  #connect .container .icons .icon-box .icon {
+  #connect .container .icons .icon-box {
     transition: 0ms;
 
     &:active {
-      color: $light-gray;
+      color: $tap-icon-color;
     }
   }
 }
