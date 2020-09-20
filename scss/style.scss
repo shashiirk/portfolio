@@ -152,13 +152,15 @@ a {
           }
         }
 
-        &:hover,
-        &:focus {
-          &::after {
-            left: 0;
-          }
-          .eye {
-            left: 44%;
+        @media (hover: hover) {
+          &:hover,
+          &:focus {
+            &::after {
+              left: 0;
+            }
+            .eye {
+              left: 44%;
+            }
           }
         }
       }
@@ -194,61 +196,45 @@ a {
       .icon-box {
         display: inline-block;
         -webkit-tap-highlight-color: transparent;
-      }
-      
-      .icon {
-        font-size: 3rem;
-        margin: 0.4rem;
-        padding: 0.2rem;
-        transition: transform 400ms;
-
-        &:hover {
-          transform: translateY(-4px);
+        
+        .icon {
+          font-size: 3rem;
+          margin: 0.4rem;
+          padding: 0.2rem;
+          transition: transform 400ms;
+  
+          @media (hover: hover) {
+            &:hover,
+            &:focus {
+              transform: translateY(-4px);
+            }
+          }
         }
       }
+      
     }
   }
 }
 
-@media(max-width: 1020px) {
+@media (max-width: 1020px) {
   #work .container .projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width: 820px) {
+@media (max-width: 820px) {
   html {
     font-size: 58%;
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   html {
     font-size: 56%;
   }
-
-  #work .container .projects .eye-box {
-    &::after {
-      transition: 0ms;
-    }
-
-    .project .eye {
-      transition: 0ms;
-    }
-
-    &:active {
-      &::after {
-        left: 0;
-      }
-
-      .eye {
-        left: 44%;
-      }
-    }
-  }
 }
 
-@media(max-width: 640px) {
+@media (max-width: 640px) {
   html {
     font-size: 54%;
   }
@@ -266,7 +252,7 @@ a {
   }
 }
 
-@media(max-width: 580px) {
+@media (max-width: 580px) {
   html {
     font-size: 52%;
   }
@@ -276,7 +262,7 @@ a {
   }
 }
 
-@media(max-width: 520px) {
+@media (max-width: 520px) {
   html {
     font-size: 50%;
   }
@@ -290,7 +276,7 @@ a {
   }
 }
 
-@media(max-width: 480px) {
+@media (max-width: 480px) {
   html {
     font-size: 48%;
   }
@@ -318,7 +304,7 @@ a {
   }
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   html {
     font-size: 46%;
   }
@@ -346,8 +332,38 @@ a {
   }
 }
 
-@media(max-width: 320px) {
+@media (max-width: 320px) {
   html {
     font-size: 40%;
+  }
+}
+
+@media (hover: none) {
+  #work .container .projects .eye-box {
+    &::after {
+      transition: 0ms;
+    }
+
+    .project .eye {
+      transition: 0ms;
+    }
+
+    &:active {
+      &::after {
+        left: 0;
+      }
+
+      .eye {
+        left: 44%;
+      }
+    }
+  }
+
+  #connect .container .icons .icon-box .icon {
+    transition: 0ms;
+
+    &:active {
+      color: $light-gray;
+    }
   }
 }

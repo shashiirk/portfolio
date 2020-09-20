@@ -140,12 +140,13 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-#work .container .projects .eye-box:hover::after, #work .container .projects .eye-box:focus::after {
-  left: 0;
-}
-
-#work .container .projects .eye-box:hover .eye, #work .container .projects .eye-box:focus .eye {
-  left: 44%;
+@media (hover: hover) {
+  #work .container .projects .eye-box:hover::after, #work .container .projects .eye-box:focus::after {
+    left: 0;
+  }
+  #work .container .projects .eye-box:hover .eye, #work .container .projects .eye-box:focus .eye {
+    left: 44%;
+  }
 }
 
 #work .container .projects .project-1 {
@@ -180,15 +181,17 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-#connect .container .icons .icon {
+#connect .container .icons .icon-box .icon {
   font-size: 3rem;
   margin: 0.4rem;
   padding: 0.2rem;
   transition: transform 400ms;
 }
 
-#connect .container .icons .icon:hover {
-  transform: translateY(-4px);
+@media (hover: hover) {
+  #connect .container .icons .icon-box .icon:hover, #connect .container .icons .icon-box .icon:focus {
+    transform: translateY(-4px);
+  }
 }
 
 @media (max-width: 1020px) {
@@ -206,18 +209,6 @@ a {
 @media (max-width: 768px) {
   html {
     font-size: 56%;
-  }
-  #work .container .projects .eye-box::after {
-    transition: 0ms;
-  }
-  #work .container .projects .eye-box .project .eye {
-    transition: 0ms;
-  }
-  #work .container .projects .eye-box:active::after {
-    left: 0;
-  }
-  #work .container .projects .eye-box:active .eye {
-    left: 44%;
   }
 }
 
@@ -302,5 +293,26 @@ a {
 @media (max-width: 320px) {
   html {
     font-size: 40%;
+  }
+}
+
+@media (hover: none) {
+  #work .container .projects .eye-box::after {
+    transition: 0ms;
+  }
+  #work .container .projects .eye-box .project .eye {
+    transition: 0ms;
+  }
+  #work .container .projects .eye-box:active::after {
+    left: 0;
+  }
+  #work .container .projects .eye-box:active .eye {
+    left: 44%;
+  }
+  #connect .container .icons .icon-box .icon {
+    transition: 0ms;
+  }
+  #connect .container .icons .icon-box .icon:active {
+    color: #404040;
   }
 }
