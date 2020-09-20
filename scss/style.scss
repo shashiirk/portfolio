@@ -106,10 +106,10 @@ a {
     }
 
     .projects {
-      padding: 1rem 0.6rem;
+      padding: 1rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 1.6rem;
+      grid-gap: 1.8rem;
 
       .eye-box {
         height: 26rem;
