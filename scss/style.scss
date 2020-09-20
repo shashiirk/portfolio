@@ -229,11 +229,11 @@ a {
 
   #work .container .projects .eye-box {
     &::after {
-      transition: 200ms;
+      transition: 0ms;
     }
 
     .project .eye {
-      transition: 200ms;
+      transition: 0ms;
     }
 
     &:active {

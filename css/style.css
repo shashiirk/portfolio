@@ -208,10 +208,10 @@ a {
     font-size: 56%;
   }
   #work .container .projects .eye-box::after {
-    transition: 200ms;
+    transition: 0ms;
   }
   #work .container .projects .eye-box .project .eye {
-    transition: 200ms;
+    transition: 0ms;
   }
   #work .container .projects .eye-box:active::after {
     left: 0;
