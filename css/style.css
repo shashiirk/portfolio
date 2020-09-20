@@ -92,7 +92,7 @@ a {
 }
 
 #work .container .projects {
-  padding: 0.4rem;
+  padding: 1rem 0.6rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.6rem;
@@ -104,7 +104,7 @@ a {
   position: relative;
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.8);
 }
 
 #work .container .projects .eye-box:last-child {
