@@ -248,7 +248,7 @@ a {
 
 @media (max-width: 520px) {
   html {
-    font-size: 50%;
+    font-size: 48%;
   }
   .container {
     width: 90%;
@@ -260,7 +260,7 @@ a {
 
 @media (max-width: 480px) {
   html {
-    font-size: 48%;
+    font-size: 44%;
   }
   #home .container p {
     font-size: 6rem;
@@ -271,38 +271,48 @@ a {
   .container .title {
     font-size: 6rem;
   }
+  .container .sub-title {
+    font-size: 2.8rem;
+  }
   #about .container .info {
-    font-size: 3.6rem;
+    font-size: 3.8rem;
+    font-weight: 700;
   }
   #work .container .projects .eye-box {
     height: 30rem;
   }
+  #connect .container .icons .icon-box .icon {
+    font-size: 4rem;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 410px) {
   html {
-    font-size: 46%;
+    font-size: 40%;
   }
   #home .container p {
-    font-size: 5.8rem;
+    font-size: 5.6rem;
   }
   .container {
     width: 90%;
   }
   .container .title {
-    font-size: 5.8rem;
+    font-size: 5.6rem;
   }
   #about .container .info {
     font-size: 3.4rem;
   }
-  #work .container .projects .eye-box {
-    height: 28rem;
+}
+
+@media (max-width: 345px) {
+  html {
+    font-size: 34%;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 290px) {
   html {
-    font-size: 40%;
+    font-size: 30%;
   }
 }
 
