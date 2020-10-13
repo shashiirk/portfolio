@@ -1,5 +1,5 @@
-$lead-font-stack: 'Montserrat', sans-serif;
-$regular-font-stack: 'Hind', sans-serif;
+$lead-font-stack: "Montserrat", sans-serif;
+$regular-font-stack: "Hind", sans-serif;
 $name-color: #14db14;
 $about-color: #2b89ca;
 $work-color: #f13c43;
@@ -119,14 +119,14 @@ a {
         position: relative;
         overflow: hidden;
         -webkit-tap-highlight-color: transparent;
-        box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.8);
+        box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.8);
 
         &:last-child {
           grid-column: 2 / 3;
         }
 
         &::after {
-          content: '';
+          content: "";
           background-color: rgba($color: $transition-color, $alpha: 0.9);
           width: 100%;
           height: 100%;
@@ -156,7 +156,7 @@ a {
 
         @media (hover: hover) {
           &:hover,
-          &:focus {
+          &:active {
             &::after {
               left: 0;
             }
@@ -202,10 +202,10 @@ a {
         -webkit-tap-highlight-color: transparent;
         color: $dark-gray;
         transition: transform 400ms;
-  
+
         @media (hover: hover) {
           &:hover,
-          &:focus {
+          &:active {
             transform: translateY(-4px);
           }
         }
@@ -215,7 +215,6 @@ a {
           margin: 0.4rem 0.6rem;
         }
       }
-      
     }
   }
 }
@@ -279,7 +278,7 @@ a {
 
   .container {
     width: 90%;
-  } 
+  }
 
   #work .container .projects .eye-box {
     height: 34rem;
