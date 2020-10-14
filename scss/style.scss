@@ -155,8 +155,7 @@ a {
         }
 
         @media (hover: hover) {
-          &:hover,
-          &:active {
+          &:hover {
             &::after {
               left: 0;
             }
@@ -204,8 +203,7 @@ a {
         transition: transform 400ms;
 
         @media (hover: hover) {
-          &:hover,
-          &:active {
+          &:hover {
             transform: translateY(-4px);
           }
         }

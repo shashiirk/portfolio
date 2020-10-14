@@ -142,12 +142,10 @@ a {
 }
 
 @media (hover: hover) {
-  #work .container .projects .eye-box:hover::after,
-  #work .container .projects .eye-box:active::after {
+  #work .container .projects .eye-box:hover::after {
     left: 0;
   }
-  #work .container .projects .eye-box:hover .eye,
-  #work .container .projects .eye-box:active .eye {
+  #work .container .projects .eye-box:hover .eye {
     left: 44%;
   }
 }
@@ -191,8 +189,7 @@ a {
 }
 
 @media (hover: hover) {
-  #connect .container .icons .icon-box:hover,
-  #connect .container .icons .icon-box:active {
+  #connect .container .icons .icon-box:hover {
     transform: translateY(-4px);
   }
 }
