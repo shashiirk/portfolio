@@ -1,3 +1,3 @@
-# portfolio-two
+# Second Portfolio
 
-This is my second personal portfolio project. I have used **HTML** and **SASS** to build this website.
+My second personal portfolio project. I have used **HTML** and **SASS** to build this website.
