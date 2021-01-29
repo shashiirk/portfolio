@@ -13,16 +13,12 @@ html {
 body {
   width: 100%;
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
   text-decoration: none;
   color: #080808;
-}
-
-.line-break {
-  display: block;
-  padding: 1rem 0;
 }
 
 .container {
@@ -60,7 +56,6 @@ a {
 
 #home .container p .underline-link {
   text-decoration: underline solid #14db14;
-  -webkit-tap-highlight-color: transparent;
 }
 
 #about {
@@ -80,6 +75,33 @@ a {
   font-weight: 600;
   line-height: 1.2;
   color: #080808;
+}
+
+#skills {
+  width: 100%;
+  padding: 4rem 0;
+  overflow: hidden;
+  display: flex;
+}
+
+#skills .container .title {
+  text-decoration: underline double #fcc305;
+}
+
+#skills .container .items {
+  font-family: "Inter", sans-serif;
+  font-size: 3.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skills .container .items .item {
+  background-color: #080808;
+  padding: 1rem 2rem;
+  margin: 0 1rem 1rem 0;
 }
 
 #work {
@@ -178,7 +200,8 @@ a {
   .container .sub-title {
     font-size: 2.8rem;
   }
-  #about .container .info {
+  #about .container .info,
+  #skills .container .items {
     font-size: 3.8rem;
   }
   #connect .container .icons .icon-box .icon {
@@ -199,7 +222,8 @@ a {
   .container .title {
     font-size: 5.6rem;
   }
-  #about .container .info {
+  #about .container .info,
+  #skills .container .items {
     font-size: 3.4rem;
   }
 }
@@ -217,14 +241,15 @@ a {
   .container .title {
     font-size: 5.6rem;
   }
-  #about .container .info {
+  #about .container .info,
+  #skills .container .items {
     font-size: 3.4rem;
   }
 }
 
 @media (hover: none) {
   #connect .container .icons .icon-box {
-    transition: 0ms;
+    transition: none;
   }
   #connect .container .icons .icon-box:active {
     color: #a0a0a0;

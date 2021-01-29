@@ -2,6 +2,7 @@ $lead-font-stack: 'Montserrat', sans-serif;
 $regular-font-stack: 'Inter', sans-serif;
 $name-color: #14db14;
 $about-color: #2b89ca;
+$skills-color: #fcc305;
 $work-color: #f13c43;
 $connect-color: #5f1478;
 $transition-color: #001122;
@@ -24,6 +25,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -31,12 +33,8 @@ a {
   color: $dark-gray;
 }
 
-.line-break {
-  display: block;
-  padding: 1rem 0;
-}
-
 .container {
+  // border: 1px red solid;
   max-width: 120rem;
   width: 85%;
   margin: auto;
@@ -70,7 +68,6 @@ a {
 
       .underline-link {
         text-decoration: underline solid $name-color;
-        -webkit-tap-highlight-color: transparent;
       }
     }
   }
@@ -93,6 +90,35 @@ a {
       font-weight: 600;
       line-height: 1.2;
       color: $dark-gray;
+    }
+  }
+}
+
+#skills {
+  width: 100%;
+  padding: 4rem 0;
+  overflow: hidden;
+  display: flex;
+
+  .container {
+    .title {
+      text-decoration: underline double $skills-color;
+    }
+
+    .items {
+      font-family: $regular-font-stack;
+      font-size: 3.4rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        background-color: $dark-gray;
+        padding: 1rem 2rem;
+        margin: 0 1rem 1rem 0;
+      }
     }
   }
 }
@@ -206,7 +232,8 @@ a {
     }
   }
 
-  #about .container .info {
+  #about .container .info,
+  #skills .container .items {
     font-size: 3.8rem;
   }
 
@@ -234,7 +261,8 @@ a {
     }
   }
 
-  #about .container .info {
+  #about .container .info,
+  #skills .container .items {
     font-size: 3.4rem;
   }
 }
@@ -258,14 +286,15 @@ a {
     }
   }
 
-  #about .container .info {
+  #about .container .info,
+  #skills .container .items {
     font-size: 3.4rem;
   }
 }
 
 @media (hover: none) {
   #connect .container .icons .icon-box {
-    transition: 0ms;
+    transition: none;
 
     &:active {
       color: $tap-icon-color;
