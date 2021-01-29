@@ -93,6 +93,7 @@ a {
   font-size: 3.4rem;
   font-weight: 600;
   line-height: 1.2;
+  margin-top: 0.8rem;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -115,6 +116,100 @@ a {
   text-decoration: underline double #f13c43;
 }
 
+#work .container .projects {
+  font-family: "Inter", sans-serif;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+#work .container .projects .project {
+  position: relative;
+}
+
+#work .container .projects .project .img {
+  overflow: hidden;
+}
+
+#work .container .projects .project .img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#work .container .projects .project .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 31, 63, 0.95);
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+#work .container .projects .project .content .project-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+#work .container .projects .project .content .links {
+  font-size: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#work .container .projects .project .content .links .link {
+  border: 1px white solid;
+  border-radius: 50%;
+  padding: 1rem 1.3rem;
+  margin: 1rem;
+  color: #fff;
+}
+
+@media (hover: hover) {
+  #work .container .projects .project .img img {
+    transition: transform 600ms ease;
+  }
+  #work .container .projects .project .content {
+    transition: opacity 600ms ease;
+  }
+  #work .container .projects .project:hover .img img {
+    transform: scale(1.2);
+  }
+  #work .container .projects .project:hover .content {
+    opacity: 1;
+  }
+  #work .container .projects .project:hover .content .links .link {
+    transition: all 400ms ease;
+  }
+  #work .container .projects .project:hover .content .links .link:hover {
+    background-color: white;
+    color: #001f3f;
+  }
+}
+
+@media (hover: none) {
+  #work .container .projects .project .content {
+    transition: opacity 400ms ease;
+  }
+  #work .container .projects .project:hover .content {
+    opacity: 1;
+  }
+  #work .container .projects .project:hover .content .links .link:active {
+    background-color: white;
+    color: #001f3f;
+  }
+}
+
 #connect {
   width: 100%;
   padding: 4rem 0;
@@ -132,7 +227,6 @@ a {
 
 #connect .container .icons .icon-box {
   display: inline-block;
-  -webkit-tap-highlight-color: transparent;
   color: #080808;
   transition: transform 400ms;
 }
@@ -148,9 +242,29 @@ a {
   margin: 0.4rem 0.6rem;
 }
 
+@media (max-width: 1000px) {
+  #work .container .projects .project .content .project-title {
+    font-size: 2rem;
+  }
+  #work .container .projects .project .content .links {
+    font-size: 1.6rem;
+    margin-top: 0.8rem;
+  }
+}
+
 @media (max-width: 920px) {
   html {
     font-size: 58%;
+  }
+  #work .container .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #work .container .projects .project .content .project-title {
+    font-size: 3rem;
+  }
+  #work .container .projects .project .content .links {
+    font-size: 2.2rem;
+    margin-top: 2.2rem;
   }
 }
 
@@ -163,6 +277,13 @@ a {
 @media (max-width: 640px) {
   html {
     font-size: 52%;
+  }
+  #work .container .projects .project .content .project-title {
+    font-size: 2.4rem;
+  }
+  #work .container .projects .project .content .links {
+    font-size: 2rem;
+    margin-top: 1rem;
   }
 }
 
@@ -184,6 +305,16 @@ a {
   }
   .container {
     width: 90%;
+  }
+  #work .container .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #work .container .projects .project .content .project-title {
+    font-size: 3.8rem;
+  }
+  #work .container .projects .project .content .links {
+    font-size: 2.8rem;
+    margin-top: 2.8rem;
   }
 }
 
