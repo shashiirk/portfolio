@@ -121,6 +121,7 @@ a {
 
 #work .container .projects .project {
   position: relative;
+  overflow: hidden;
 }
 
 #work .container .projects .project .img {
