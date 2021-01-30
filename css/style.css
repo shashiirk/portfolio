@@ -147,6 +147,7 @@ a {
   justify-content: center;
   align-items: center;
   opacity: 0;
+  overflow: hidden;
 }
 
 #work .container .projects .project .content .project-title {
