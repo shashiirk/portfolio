@@ -33,12 +33,10 @@ a {
 }
 
 .container {
-  // border: 1px red solid;
   max-width: 120rem;
   width: 85%;
   margin: auto;
   font-family: $lead-font-stack;
-  overflow: hidden;
 
   .title {
     font-size: 8rem;
@@ -56,7 +54,6 @@ a {
   height: 100vh;
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 
   .container {
@@ -75,7 +72,6 @@ a {
 #about {
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 
   .container {
@@ -96,7 +92,6 @@ a {
 #skills {
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 
   .container {
@@ -126,7 +121,6 @@ a {
 #work {
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 
   .container {
@@ -171,6 +165,7 @@ a {
           .project-title {
             font-size: 2.8rem;
             font-weight: 500;
+            transform: translateY(500%);
           }
 
           .links {
@@ -179,9 +174,10 @@ a {
             display: flex;
             justify-content: center;
             align-items: center;
+            transform: translateY(500%);
 
             .link {
-              border: 1px white solid;
+              border: 2px white solid;
               border-radius: 50%;
               padding: 1rem 1.3rem;
               margin: 1rem;
@@ -192,11 +188,16 @@ a {
 
         @media (hover: hover) {
           .img img {
-            transition: transform 600ms ease;
+            transition: transform 400ms ease;
           }
 
           .content {
-            transition: opacity 600ms ease;
+            transition: opacity 400ms ease;
+
+            .project-title,
+            .links {
+              transition: transform 400ms ease;
+            }
           }
 
           &:hover {
@@ -207,7 +208,35 @@ a {
             .content {
               opacity: 1;
 
+              .project-title {
+                transform: translateY(0);
+              }
+
               .links {
+                transform: translateY(0);
+                .link {
+                  transition: all 400ms ease;
+
+                  &:hover {
+                    background-color: white;
+                    color: #001f3f;
+                  }
+                }
+              }
+            }
+          }
+
+          &:focus,
+          &:focus-within {
+            .content {
+              opacity: 1;
+
+              .project-title {
+                transform: translateY(0);
+              }
+
+              .links {
+                transform: translateY(0);
                 .link {
                   transition: all 400ms ease;
 
@@ -222,15 +251,34 @@ a {
         }
 
         @media (hover: none) {
+          .img img {
+            transition: transform 400ms ease;
+          }
+
           .content {
             transition: opacity 400ms ease;
+
+            .project-title,
+            .links {
+              transition: transform 400ms ease;
+            }
           }
 
           &:hover {
+            .img img {
+              transform: scale(1.2);
+            }
+
             .content {
               opacity: 1;
 
+              .project-title {
+                transform: translateY(0);
+              }
+
               .links {
+                transform: translateY(0);
+
                 .link:active {
                   background-color: white;
                   color: #001f3f;
@@ -247,7 +295,6 @@ a {
 #connect {
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 
   .container {
@@ -262,6 +309,8 @@ a {
         display: inline-block;
         color: $dark-gray;
         transition: transform 400ms;
+        margin-right: 0.8rem;
+        outline: none;
 
         @media (hover: hover) {
           &:hover {
@@ -272,6 +321,16 @@ a {
         .icon {
           font-size: 3rem;
           margin: 0.4rem 0.6rem;
+        }
+
+        @media (hover: none) {
+          & {
+            transition: none;
+
+            & .icon:active {
+              color: $tap-icon-color;
+            }
+          }
         }
       }
     }
@@ -397,9 +456,12 @@ a {
     }
   }
 
-  #about .container .info,
-  #skills .container .items {
+  #about .container .info {
     font-size: 3.8rem;
+  }
+
+  #skills .container .items {
+    font-size: 3.2rem;
   }
 
   #connect .container .icons .icon-box .icon {
@@ -451,18 +513,11 @@ a {
     }
   }
 
-  #about .container .info,
-  #skills .container .items {
+  #about .container .info {
     font-size: 3.4rem;
   }
-}
 
-@media (hover: none) {
-  #connect .container .icons .icon-box {
-    transition: none;
-
-    &:active {
-      color: $tap-icon-color;
-    }
+  #skills .container .items {
+    font-size: 2.8rem;
   }
 }

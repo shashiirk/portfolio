@@ -26,7 +26,6 @@ a {
   width: 85%;
   margin: auto;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
 }
 
 .container .title {
@@ -44,7 +43,6 @@ a {
   height: 100vh;
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 }
 
@@ -61,7 +59,6 @@ a {
 #about {
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 }
 
@@ -80,7 +77,6 @@ a {
 #skills {
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 }
 
@@ -108,7 +104,6 @@ a {
 #work {
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 }
 
@@ -157,6 +152,7 @@ a {
 #work .container .projects .project .content .project-title {
   font-size: 2.8rem;
   font-weight: 500;
+  transform: translateY(500%);
 }
 
 #work .container .projects .project .content .links {
@@ -165,10 +161,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(500%);
 }
 
 #work .container .projects .project .content .links .link {
-  border: 1px white solid;
+  border: 2px white solid;
   border-radius: 50%;
   padding: 1rem 1.3rem;
   margin: 1rem;
@@ -177,16 +174,26 @@ a {
 
 @media (hover: hover) {
   #work .container .projects .project .img img {
-    transition: transform 600ms ease;
+    transition: transform 400ms ease;
   }
   #work .container .projects .project .content {
-    transition: opacity 600ms ease;
+    transition: opacity 400ms ease;
+  }
+  #work .container .projects .project .content .project-title,
+  #work .container .projects .project .content .links {
+    transition: transform 400ms ease;
   }
   #work .container .projects .project:hover .img img {
     transform: scale(1.2);
   }
   #work .container .projects .project:hover .content {
     opacity: 1;
+  }
+  #work .container .projects .project:hover .content .project-title {
+    transform: translateY(0);
+  }
+  #work .container .projects .project:hover .content .links {
+    transform: translateY(0);
   }
   #work .container .projects .project:hover .content .links .link {
     transition: all 400ms ease;
@@ -195,14 +202,46 @@ a {
     background-color: white;
     color: #001f3f;
   }
+  #work .container .projects .project:focus .content, #work .container .projects .project:focus-within .content {
+    opacity: 1;
+  }
+  #work .container .projects .project:focus .content .project-title, #work .container .projects .project:focus-within .content .project-title {
+    transform: translateY(0);
+  }
+  #work .container .projects .project:focus .content .links, #work .container .projects .project:focus-within .content .links {
+    transform: translateY(0);
+  }
+  #work .container .projects .project:focus .content .links .link, #work .container .projects .project:focus-within .content .links .link {
+    transition: all 400ms ease;
+  }
+  #work .container .projects .project:focus .content .links .link:hover, #work .container .projects .project:focus-within .content .links .link:hover {
+    background-color: white;
+    color: #001f3f;
+  }
 }
 
 @media (hover: none) {
+  #work .container .projects .project .img img {
+    transition: transform 400ms ease;
+  }
   #work .container .projects .project .content {
     transition: opacity 400ms ease;
   }
+  #work .container .projects .project .content .project-title,
+  #work .container .projects .project .content .links {
+    transition: transform 400ms ease;
+  }
+  #work .container .projects .project:hover .img img {
+    transform: scale(1.2);
+  }
   #work .container .projects .project:hover .content {
     opacity: 1;
+  }
+  #work .container .projects .project:hover .content .project-title {
+    transform: translateY(0);
+  }
+  #work .container .projects .project:hover .content .links {
+    transform: translateY(0);
   }
   #work .container .projects .project:hover .content .links .link:active {
     background-color: white;
@@ -213,7 +252,6 @@ a {
 #connect {
   width: 100%;
   padding: 4rem 0;
-  overflow: hidden;
   display: flex;
 }
 
@@ -229,6 +267,8 @@ a {
   display: inline-block;
   color: #080808;
   transition: transform 400ms;
+  margin-right: 0.8rem;
+  outline: none;
 }
 
 @media (hover: hover) {
@@ -240,6 +280,15 @@ a {
 #connect .container .icons .icon-box .icon {
   font-size: 3rem;
   margin: 0.4rem 0.6rem;
+}
+
+@media (hover: none) {
+  #connect .container .icons .icon-box {
+    transition: none;
+  }
+  #connect .container .icons .icon-box .icon:active {
+    color: #a0a0a0;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -331,9 +380,11 @@ a {
   .container .sub-title {
     font-size: 2.8rem;
   }
-  #about .container .info,
-  #skills .container .items {
+  #about .container .info {
     font-size: 3.8rem;
+  }
+  #skills .container .items {
+    font-size: 3.2rem;
   }
   #connect .container .icons .icon-box .icon {
     font-size: 3.8rem;
@@ -372,17 +423,10 @@ a {
   .container .title {
     font-size: 5.6rem;
   }
-  #about .container .info,
-  #skills .container .items {
+  #about .container .info {
     font-size: 3.4rem;
   }
-}
-
-@media (hover: none) {
-  #connect .container .icons .icon-box {
-    transition: none;
-  }
-  #connect .container .icons .icon-box:active {
-    color: #a0a0a0;
+  #skills .container .items {
+    font-size: 2.8rem;
   }
 }
